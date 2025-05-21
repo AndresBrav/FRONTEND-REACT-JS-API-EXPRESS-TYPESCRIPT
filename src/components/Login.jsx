@@ -1,8 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { TokenContext } from '../Contexts/TokenContext';
+import axios from 'axios';
+const API_LOGIN = import.meta.env.VITE_API_LOGIN;
 
 const Login = () => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const navigate = useNavigate();
+    const { claveAcceso, setClaveAcceso } = useContext(TokenContext);
 
     const handleUsernameChange = (e) => {
         setUsername(e.target.value)
@@ -17,6 +23,32 @@ const Login = () => {
         console.log(password)
     }, [username, password])
 
+
+    useEffect(() => {
+        if (claveAcceso) { // Usa el token del contexto
+            navigate('/inicioPerfil');
+        }
+    }, [claveAcceso, navigate]);
+
+
+    const handleLogin = async () => {
+        try {
+            const { data } = await axios.post('http://localhost:3000/api/auth/login/start',
+                { login: username, clave: password },
+                { headers: { 'Content-Type': 'application/json' } }
+            )
+            setClaveAcceso(data.result.token)
+            console.log(data.result.token)
+        }
+        catch (error) {
+            if (axios.isAxiosError(error)) {
+                console.error("Login error:", error.response?.data || error.message);
+            } else {
+                console.error("Unexpected error:", error);
+            }
+        }
+
+    }
 
     return (
         <>
@@ -36,7 +68,10 @@ const Login = () => {
                         onChange={handlePasswordChange}
                         className="form-control mb-3"
                     />
-                    <button type="button" className="btn btn-primary w-100">Log in</button>
+                    <button
+                        type="button"
+                        className="btn btn-primary w-100"
+                        onClick={handleLogin}>Log in</button>
                 </div>
             </div>
         </>
