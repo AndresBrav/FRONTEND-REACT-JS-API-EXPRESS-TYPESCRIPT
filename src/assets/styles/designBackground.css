@@ -2,3 +2,28 @@ body {
     background-color: black;
     margin: 0;
 }
+
+.container-header {
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    list-style: none;
+    align-content: flex-start;
+    flex-direction: row;
+    gap: 20px;
+    /* background-color: green; */
+}
+
+.container-header > li > a{
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.8s ease; /* animación suave */
+    font-size: 16px;
+}
+
+.container-header > li > a:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(250, 250, 250, 0.9); /* sombra suave */
+    color: black;
+}

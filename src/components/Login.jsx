@@ -19,12 +19,6 @@ const Login = () => {
     }
 
     useEffect(() => {
-        console.log(username)
-        console.log(password)
-    }, [username, password])
-
-
-    useEffect(() => {
         if (claveAcceso) { // Usa el token del contexto
             navigate('/inicioPerfil');
         }
@@ -33,7 +27,7 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            const { data } = await axios.post('http://localhost:3000/api/auth/login/start',
+            const { data } = await axios.post(`${API_LOGIN}`,
                 { login: username, clave: password },
                 { headers: { 'Content-Type': 'application/json' } }
             )
