@@ -21,3 +21,14 @@ strong{
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.addUserDiv{
+    display: flex;
+    color: white;
+    justify-content: center;
+    /* align-items: flex-end; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-size: 40px;
+}
