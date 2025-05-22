@@ -12,3 +12,12 @@
 strong{
     color: yellow;
 }
+
+.labelconsult{
+    display: flex;
+    color: white;
+    justify-content: center;
+    /* align-items: flex-end; */
+    flex-direction: row;
+    flex-wrap: wrap;
+}

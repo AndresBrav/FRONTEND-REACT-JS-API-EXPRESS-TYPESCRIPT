@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react'
 import axios from 'axios'
 import { TokenContext } from '../../Contexts/TokenContext';
+import { useAuthRedirect } from '../../hooks/useAuthRedirect';
 
 const API_USERS = import.meta.env.VITE_API_USERS; /* http://localhost:3000/users/ */
 
 const ConsultDetails = () => {
+  useAuthRedirect(); // Protect this page redirect login if don't find token
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState("")
   const { keyAccess, setKeyAccess } = useContext(TokenContext);
