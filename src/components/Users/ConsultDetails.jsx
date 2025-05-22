@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import axios from 'axios'
 import { TokenContext } from '../../Contexts/TokenContext';
 
-const API_USERS = import.meta.env.API_USERS; /* http://localhost:3000/users/ */
+const API_USERS = import.meta.env.VITE_API_USERS; /* http://localhost:3000/users/ */
 
 const ConsultDetails = () => {
   const [users, setUsers] = useState([]);
@@ -10,7 +10,7 @@ const ConsultDetails = () => {
 
   const handleConsultDetails = async (e) => {
     try {
-      const response = await axios.get(`http://localhost:3000/users/getUsers/`,
+      const response = await axios.get(`${API_USERS}getUsers/`,
         {
           headers: {
             "x-api-token": claveAcceso,
