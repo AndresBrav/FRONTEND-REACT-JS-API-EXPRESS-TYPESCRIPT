@@ -18,7 +18,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/inicioPerfil" element={<StartPerfil />} />
+            <Route path="/homePerfil" element={<StartPerfil />} />
             <Route path="/consultdetails" element={<ConsultDetails />} />
             <Route path="/consultonedetail" element={<ConsultOneDetail />} />
             <Route path="/addUser" element={<AddUser />} />

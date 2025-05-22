@@ -6,18 +6,26 @@ const API_USERS = import.meta.env.VITE_API_USERS; /* http://localhost:3000/users
 
 const ConsultDetails = () => {
   const [users, setUsers] = useState([]);
-  const { claveAcceso, setClaveAcceso } = useContext(TokenContext);
+  const [message, setMessage] = useState("")
+  const { keyAccess, setKeyAccess } = useContext(TokenContext);
 
   const handleConsultDetails = async (e) => {
     try {
       const response = await axios.get(`${API_USERS}getUsers/`,
         {
           headers: {
-            "x-api-token": claveAcceso,
+            "x-api-token": keyAccess,
           },
         });
-      setUsers(response.data);
-      console.log(response.data)
+
+      if (response.data === "you do not have permissions to access users") {
+        console.log("we don't have array")
+        setMessage("you do not have permissions to access users")
+      }
+      else {
+        setUsers(response.data);
+        console.log(response.data)
+      }
 
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -52,6 +60,9 @@ const ConsultDetails = () => {
             ))}
           </ul>
         )}
+      </div>
+      <div>
+        {message && <p className='pConsultDetails'>{message}</p>}
       </div>
     </>
   )

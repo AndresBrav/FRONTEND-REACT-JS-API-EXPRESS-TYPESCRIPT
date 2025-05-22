@@ -8,7 +8,7 @@ const Login = () => {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const navigate = useNavigate();
-    const { claveAcceso, setClaveAcceso } = useContext(TokenContext);
+    const { keyAccess, setKeyAccess } = useContext(TokenContext);
 
     const handleUsernameChange = (e) => {
         setUsername(e.target.value)
@@ -19,10 +19,10 @@ const Login = () => {
     }
 
     useEffect(() => {
-        if (claveAcceso) { // Usa el token del contexto
-            navigate('/inicioPerfil');
+        if (keyAccess) { //  Use token from context
+            navigate('/homePerfil');
         }
-    }, [claveAcceso, navigate]);
+    }, [keyAccess, navigate]);
 
 
     const handleLogin = async () => {
@@ -31,7 +31,7 @@ const Login = () => {
                 { login: username, clave: password },
                 { headers: { 'Content-Type': 'application/json' } }
             )
-            setClaveAcceso(data.result.token)
+            setKeyAccess(data.result.token)
             console.log(data.result.token)
         }
         catch (error) {
