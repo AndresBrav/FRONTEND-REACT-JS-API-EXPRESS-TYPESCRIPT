@@ -19,7 +19,7 @@ body {
     text-decoration: none;
     border-radius: 6px;
     transition: all 0.8s ease; /* animación suave */
-    font-size: 16px;
+    font-size: 11px;
 }
 
 .container-header > li > a:hover {

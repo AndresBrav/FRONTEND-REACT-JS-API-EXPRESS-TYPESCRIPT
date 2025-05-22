@@ -1,0 +1,21 @@
+.pConsultDetails {
+    display: flex;
+    color: white;
+    justify-content: center;
+    /* align-items: flex-end; */
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pConsultDetailskey{
+    display: flex;
+    color: white;
+    justify-content: center;
+    /* align-items: flex-end; */
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+strong{
+    color: yellow;
+}
