@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { useAuthRedirect } from '../../hooks/useAuthRedirect'; /* import hook */
 import { TokenContext } from '../../Contexts/TokenContext';
 import axios from 'axios';
+import BackToHomePerfil from '../Shared/BackToHomePerfil';
 const API_USERS = import.meta.env.VITE_API_USERS;
 
 
@@ -33,6 +34,7 @@ const DeleteUser = () => {
   return (
     <>
       <>
+        <BackToHomePerfil/>
         <div className='labelconsult'>Delete User</div>
 
         <label className='labelconsult' >Ingrese un número</label>

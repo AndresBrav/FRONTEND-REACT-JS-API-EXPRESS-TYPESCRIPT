@@ -32,3 +32,25 @@ strong{
     margin-top: 20px;
     font-size: 40px;
 }
+
+.containerHome {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.containerHomeLi {
+  color: white;
+  text-decoration: none;
+  margin-right: 50px;
+  border-radius: 20px;
+  margin-top: 20px;
+  transition: all 0.8s ease; /* animación suave */
+}
+
+.containerHomeLi:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px rgba(250, 250, 250, 0.9); /* sombra suave */
+}

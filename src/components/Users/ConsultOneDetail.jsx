@@ -3,6 +3,7 @@ import { useAuthRedirect } from '../../hooks/useAuthRedirect';
 import '../../assets/styles/designFonts.css'
 import axios from 'axios';
 import { TokenContext } from '../../Contexts/TokenContext';
+import BackToHomePerfil from '../Shared/BackToHomePerfil';
 
 const API_USERS = import.meta.env.VITE_API_USERS;
 
@@ -43,6 +44,7 @@ const ConsultOneDetail = () => {
 
   return (
     <>
+      <BackToHomePerfil/>
       <div className='labelconsult'>ConsultOneDetail</div>
 
       <label className='labelconsult' >Ingrese un número</label>

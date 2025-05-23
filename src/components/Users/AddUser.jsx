@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react'
 import { useAuthRedirect } from '../../hooks/useAuthRedirect';
 import { TokenContext } from '../../Contexts/TokenContext';
-const API_USERS = import.meta.env.VITE_API_USERS; /* http://localhost:3000/users/ */
 import axios from 'axios';
+import BackToHomePerfil from '../Shared/BackToHomePerfil';
+const API_USERS = import.meta.env.VITE_API_USERS; /* http://localhost:3000/users/ */
 
 const AddUser = () => {
   useAuthRedirect();
@@ -39,6 +40,7 @@ const AddUser = () => {
 
   return (
     <>
+      <BackToHomePerfil />
       <div className='addUserDiv'>Add User</div>
       {message && <p className='pConsultDetails'>{message}</p>}
       <div className="d-flex justify-content-center align-items-center vh-100">
