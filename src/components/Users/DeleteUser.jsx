@@ -33,29 +33,29 @@ const DeleteUser = () => {
 
   return (
     <>
-      <>
-        <BackToHomePerfil/>
-        <div className='labelconsult'>Delete User</div>
 
-        <label className='labelconsult' >Ingrese un número</label>
-        <div className='labelconsult'>
-          <input
-            type="text"
-            placeholder="Number"
-            value={number}
-            onChange={handleConsultDelete}
-          />
-        </div>
-        <button
-          type="button"
-          className="btn btn-primary w-25 mx-auto d-block mt-4"
-          onClick={handleConsultDeleteButton}>
-          Delete One User
-        </button>
-        <div>
-          {message && <p className='pConsultDetails'>{message}</p>}
-        </div>
-      </>
+      <BackToHomePerfil />
+      <div className='labelconsult'>Delete User</div>
+
+      <label className='labelconsult' >Ingrese un número</label>
+      <div className='labelconsult'>
+        <input
+          type="text"
+          placeholder="Number"
+          value={number}
+          onChange={handleConsultDelete}
+        />
+      </div>
+      <button
+        type="button"
+        className="btn btn-primary w-25 mx-auto d-block mt-4"
+        onClick={handleConsultDeleteButton}>
+        Delete One User
+      </button>
+      <div>
+        {message && <p className='pConsultDetails'>{message}</p>}
+      </div>
+
     </>
   )
 }
