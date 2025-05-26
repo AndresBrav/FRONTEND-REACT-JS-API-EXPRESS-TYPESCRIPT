@@ -43,8 +43,8 @@ const AddUser = () => {
       <BackToHomePerfil />
       <div className='addUserDiv'>Add User</div>
       {message && <p className='pConsultDetails'>{message}</p>}
-      <div className="d-flex justify-content-center align-items-center vh-100">
-        <form onSubmit={handleSubmit} className="p-4 border rounded bg-dark" style={{ minWidth: "300px" }}>
+      <div className="d-flex justify-content-center align-items-center">
+        <form onSubmit={handleSubmit} className="p-4 border rounded " style={{ minWidth: "300px" }}>
           <input
             type="text"
             placeholder="Write a login"
@@ -77,7 +77,7 @@ const AddUser = () => {
             className="form-control mb-3"
           />
 
-          <button type="submit" className="btn btn-secondary w-100">Enviar</button>
+          <button type="submit" className="btn-form">Enviar</button>
         </form>
       </div>
       

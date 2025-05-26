@@ -1,6 +1,14 @@
 body {
-    background-color: black;
+    /* background-color: black;
+    margin: 0; */
     margin: 0;
+    background-image: url('https://img.freepik.com/free-photo/3d-car-with-vibrant-colors_23-2150796954.jpg?t=st=1748269885~exp=1748273485~hmac=ee769a71f4931eae65ce681061a195d255ea82ffa2319350fd47833ff25404c6&w=826');
+    /* o '/img/fondo.jpg' según la ubicación */
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    height: 100vh;
+    width: 100vw;
 }
 
 .container-header {
@@ -15,16 +23,20 @@ body {
     margin-top: 15px;
 }
 
-.container-header > li > a{
+.container-header>li>a {
+    /* background-color:rgba(0, 0, 0, 0.8) ; */
+    /* border: 1px solid white; */
     color: white;
     text-decoration: none;
-    border-radius: 6px;
-    transition: all 0.8s ease; /* animación suave */
+    border-radius: 3px;
+    transition: all 0.8s ease;
+    /* animación suave */
     font-size: 11px;
 }
 
-.container-header > li > a:hover {
+.container-header>li>a:hover {
     background-color: white;
-    box-shadow: 0 4px 8px rgba(250, 250, 250, 0.9); /* sombra suave */
+    box-shadow: 0 4px 8px rgba(250, 250, 250, 0.9);
+    /* sombra suave */
     color: black;
 }

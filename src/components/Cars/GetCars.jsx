@@ -35,7 +35,7 @@ const GetCars = () => {
       <BackToHomePerfil />
       <button
         type="button"
-        className="btn btn-primary w-15 mx-auto d-block mt-4"
+        className="custom-btn"
         onClick={handleConsultCars}>
         Consult Cars
       </button>

@@ -48,7 +48,7 @@ const DeleteUser = () => {
       </div>
       <button
         type="button"
-        className="btn btn-primary w-25 mx-auto d-block mt-4"
+        className="custom-btn"
         onClick={handleConsultDeleteButton}>
         Delete One User
       </button>

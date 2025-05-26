@@ -3,6 +3,7 @@ import axios from 'axios'
 import { TokenContext } from '../../Contexts/TokenContext';
 import { useAuthRedirect } from '../../hooks/useAuthRedirect';
 import BackToHomePerfil from '../Shared/BackToHomePerfil';
+import '../../assets/styles/designFonts.css'
 
 const API_USERS = import.meta.env.VITE_API_USERS; /* http://localhost:3000/users/ */
 
@@ -43,7 +44,7 @@ const ConsultDetails = () => {
       <BackToHomePerfil />
       <button
         type="button"
-        className="btn btn-primary w-25 mx-auto d-block mt-4"
+        className="custom-btn"
         onClick={handleConsultDetails}>
         Consult Details
       </button>

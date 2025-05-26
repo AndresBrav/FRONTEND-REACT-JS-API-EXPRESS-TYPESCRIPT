@@ -109,15 +109,16 @@ const UpdateCar = () => {
       </div>
       <button
         type="button"
-        className="btn btn-primary w-25 mx-auto d-block mt-4"
+        className="custom-btn"
         onClick={handleGetCarDB}>
         Bring Data Car
       </button>
       <div>
         {message && <p className='pConsultDetails'>{message}</p>} {/* message */}
       </div>
-      <div className="d-flex justify-content-center align-items-center vh-100">
-        <form onSubmit={handleSubmit} className="p-4 border rounded bg-dark" style={{ minWidth: "300px" }}>
+      <br />
+      <div className="d-flex justify-content-center align-items-center">
+        <form onSubmit={handleSubmit} className="p-4 border rounded" style={{ minWidth: "300px" }}>
           <input
             type="text"
             placeholder="Write a nombre"
@@ -149,7 +150,7 @@ const UpdateCar = () => {
             onChange={(e) => setStock(parseInt(e.target.value))}
             className="form-control mb-3"
           />
-          <button type="submit" className="btn btn-secondary w-100">Enviar</button>
+          <button type="submit" className="btn-form">Enviar</button>
         </form>
       </div>
 
