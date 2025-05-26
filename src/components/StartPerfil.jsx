@@ -43,6 +43,8 @@ const StartPerfil = () => {
         <details>
           <summary>File Cars Options</summary>
           <ul className='container-headerOptions'>
+
+            <li><Link to="/listFiles">List files</Link></li>
             <li><Link to="/saveFile">Save list Cars</Link></li>
             <li><Link to="/saveOneFile">Save One Car</Link></li>
             <li><Link to="/uploadFtp">Upload FTP</Link></li>

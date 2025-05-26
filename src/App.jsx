@@ -14,6 +14,7 @@ import DeleteCar from './components/Cars/DeleteCar'
 import GetCars from './components/Cars/GetCars'
 import GetOneCar from './components/Cars/GetOneCar'
 import UpdateCar from './components/Cars/UpdateCar'
+import ListFiles from './components/Cars/Files/ListFiles'
 import SaveFile from './components/Cars/Files/SaveFile'
 import SaveOneFile from './components/Cars/Files/SaveOneFile'
 import UploadFTP from './components/Cars/Files/UploadFTP'
@@ -38,11 +39,12 @@ function App() {
             <Route path="/addCar" element={<AddCar />} />
             <Route path="/updateCar" element={<UpdateCar />} />
             <Route path="/deleteCar" element={<DeleteCar />} />
-            <Route path="/saveFile" element={< SaveFile/>} />
-            <Route path="/saveOneFile" element={< SaveOneFile/>} />
-            <Route path="/uploadFtp" element={< UploadFTP/>} />
-            <Route path="/generateB64" element={< GenerateB64/>} />
-            <Route path="/convertB64toFile" element={< ConvertB64toFile/>} />
+            <Route path="/listFiles" element={<ListFiles />} />
+            <Route path="/saveFile" element={< SaveFile />} />
+            <Route path="/saveOneFile" element={< SaveOneFile />} />
+            <Route path="/uploadFtp" element={< UploadFTP />} />
+            <Route path="/generateB64" element={< GenerateB64 />} />
+            <Route path="/convertB64toFile" element={< ConvertB64toFile />} />
           </Routes>
         </BrowserRouter>
       </TokenProvider>
