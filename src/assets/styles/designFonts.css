@@ -7,6 +7,19 @@
     flex-wrap: wrap;
 }
 
+.pConsultDetails2 {
+    display: flex;
+    color: white;
+    justify-content: center;
+    /* align-items: flex-end; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    word-break: break-all;
+    /* fuerza el quiebre donde sea necesario */
+    white-space: pre-wrap;
+    /* conserva saltos de línea si los hay */
+}
+
 
 
 strong {
