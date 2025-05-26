@@ -51,24 +51,45 @@ const UpdateCar = () => {
     }
   }
 
-  const handleSubmit = async (e) => {
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.put(
+  //       `${API_CARS}updateCar/${number}`,
+  //       { nombre, descripcion, precio, stock },
+  //       {
+  //         headers: {
+  //           "x-api-token": keyAccess,
+  //         },
+  //       }
+  //     )
+  //     console.log(response)
+  //     setMessage(response.data.msg)
+  //   } catch (error) {
+  //     console.log("Error updating car")
+  //   }
+  // }
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.put(
-        `${API_CARS}updateCar/${number}`,
-        { nombre, descripcion, precio, stock },
-        {
-          headers: {
-            "x-api-token": keyAccess,
-          },
-        }
-      )
-      console.log(response)
-      setMessage(response.data.msg)
-    } catch (error) {
-      console.log("Error updating car")
-    }
-  }
+    axios.put(
+      `${API_CARS}updateCar/${number}`,
+      { nombre, descripcion, precio, stock },
+      {
+        headers: {
+          "x-api-token": keyAccess,
+        },
+      }
+    )
+      .then((response) => {
+        console.log(response);
+        setMessage(response.data.msg);
+      })
+      .catch((error) => {
+        console.log("Error updating car", error);
+      });
+  };
+
 
 
   return (
