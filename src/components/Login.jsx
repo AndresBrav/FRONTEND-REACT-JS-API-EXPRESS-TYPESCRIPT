@@ -47,7 +47,7 @@ const Login = () => {
     return (
         <>
             <div className="d-flex justify-content-center align-items-center vh-100">
-                <div className="p-4 border rounded bg-dark">
+                <div className="p-4 border rounded">
                     <input
                         type="text"
                         placeholder="Username"
@@ -64,7 +64,7 @@ const Login = () => {
                     />
                     <button
                         type="button"
-                        className="btn btn-primary w-100"
+                        className="btn-form"
                         onClick={handleLogin}>Log in</button>
                 </div>
             </div>
